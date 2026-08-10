@@ -61,12 +61,12 @@ main {
 
 .introduction {
    width: 750px;
-   border: 1px solid white;
+   /* border: 1px solid white; */
    font-size: 70px;
    margin-bottom: 0;
 }
 .intro-description {
-   border: 1px solid white;
+   /* border: 1px solid white;    */
    width: 750px;
    font-size: 25px;
    margin-top: 0;
