@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,72 +9,654 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <link rel="stylesheet" href="index.css">
+    <meta
+        name="description"
+        content="Jared Abrera — Backend Developer specializing in Node.js, TypeScript, PostgreSQL and scalable backend systems."
+    >
 
-    <title>Jaja.Dev</title>
+    <title>Jared Abrera — Backend Developer</title>
+
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <nav class="top-nav">
+    <!-- ================= NAVBAR ================= -->
 
-        <h2 class="top-logo">
-            Jaja.Dev
-        </h2>
+    <header class="site-header">
 
-        <a href="home">Home</a>
+        <nav class="navbar container">
 
-        <a href="tech-stack">Stack</a>
+            <a href="#home" class="brand">
+                <span class="brand-mark">&lt;/&gt;</span>
+                <span>Jaja.dev</span>
+            </a>
 
-        <a href="contact">Contact</a>
-
-        <a href="about">About</a>
-
-        <a class="download-btn" href="#">
-            <img
-                class="download-icon"
-                src="./icons/downloads.png"
-                alt="Download"
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
             >
-            Download CV
-        </a>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    </nav>
+            <div class="nav-menu">
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
+
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
+
+                <a href="#experience" class="nav-link">
+                    Experience
+                </a>
+
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+
+                <a href="#" class="nav-resume">
+                    Download CV
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
 
 
     <main>
 
-        <h1 class="introduction">
-            Hi, I'm Jared Abrera
-            <br>
-            Backend Developer
-        </h1>
+        <!-- ================= HERO ================= -->
 
-        <p class="intro-description">
-            Passionate about building reliable backend systems
-            <br>
-            and turning ideas into impactful solutions.
-        </p>
+        <section class="hero container" id="home">
 
-        <img
-            class="profile-pic"
-            src="./images/profile.jpg"
-            alt="Jared Abrera"
-        >
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    Available for opportunities
+                </div>
+
+                <h1>
+                    Building reliable
+                    <span>backend systems</span>
+                    for the modern web.
+                </h1>
+
+                <p class="hero-text">
+                    I'm Jared Abrera, a backend developer focused on
+                    building scalable APIs, clean architectures, and
+                    reliable server-side applications.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                        <span>→</span>
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Let's Talk
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+                <div class="socials">
+
+                    <span>Find me on</span>
+
+                    <a href="#" aria-label="GitHub">
+                        GH
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        in
+                    </a>
+
+                    <a href="#" aria-label="Email">
+                        @
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero visual -->
+
+            <div class="hero-visual">
+
+                <div class="grid-background"></div>
+
+                <div class="code-card">
+
+                    <div class="code-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <pre><code><span class="code-keyword">const</span> developer = {
+  name: <span class="code-string">"Jared Abrera"</span>,
+  role: <span class="code-string">"Backend Developer"</span>,
+  stack: [
+    <span class="code-string">"Node.js"</span>,
+    <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"PostgreSQL"</span>
+  ]
+};</code></pre>
+
+                </div>
+
+                <div class="profile-wrapper">
+
+                    <div class="profile-glow"></div>
+
+                    <img
+                        src="./images/profile.jpg"
+                        alt="Jared Abrera"
+                        class="profile-image"
+                    >
+
+                </div>
+
+                <div class="floating-card floating-card-one">
+                    <strong>10+</strong>
+                    <span>Projects</span>
+                </div>
+
+                <div class="floating-card floating-card-two">
+                    <strong>Node.js</strong>
+                    <span>Backend</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="section container" id="about">
+
+            <div class="section-header">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <div>
+                    <span class="section-label">
+                        ABOUT ME
+                    </span>
+
+                    <h2>
+                        A developer who enjoys
+                        solving real problems.
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-copy">
+
+                    <p>
+                        I'm a Bachelor of Science in Information Technology
+                        graduate specializing in Web and Mobile Application
+                        Development.
+                    </p>
+
+                    <p>
+                        My primary focus is backend development. I enjoy
+                        designing APIs, working with databases, integrating
+                        services, and building systems that are reliable
+                        and maintainable.
+                    </p>
+
+                    <p>
+                        I'm continuously improving my skills by working on
+                        real-world projects and learning modern backend
+                        technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <strong>10+</strong>
+                        <span>Projects built</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <strong>500+</strong>
+                        <span>Training hours</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <strong>1</strong>
+                        <span>Professional OJT</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <strong>2026</strong>
+                        <span>IT Graduate</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section class="section container" id="skills">
+
+            <div class="section-header">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <div>
+                    <span class="section-label">
+                        TECHNOLOGIES
+                    </span>
+
+                    <h2>
+                        Tools I use to build.
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <span class="skill-icon">JS</span>
+                    <div>
+                        <strong>Node.js</strong>
+                        <small>Backend Runtime</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">TS</span>
+                    <div>
+                        <strong>TypeScript</strong>
+                        <small>Programming Language</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">EX</span>
+                    <div>
+                        <strong>Express.js</strong>
+                        <small>Backend Framework</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">PG</span>
+                    <div>
+                        <strong>PostgreSQL</strong>
+                        <small>Relational Database</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">KF</span>
+                    <div>
+                        <strong>Apache Kafka</strong>
+                        <small>Event Streaming</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">RD</span>
+                    <div>
+                        <strong>Redis</strong>
+                        <small>Caching</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">JT</span>
+                    <div>
+                        <strong>Jest</strong>
+                        <small>Testing</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">DK</span>
+                    <div>
+                        <strong>Docker</strong>
+                        <small>Containerization</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">GI</span>
+                    <div>
+                        <strong>Git</strong>
+                        <small>Version Control</small>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-icon">PM</span>
+                    <div>
+                        <strong>Postman</strong>
+                        <small>API Testing</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section class="section container" id="projects">
+
+            <div class="section-header section-header-row">
+
+                <div class="section-header-left">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+                        <span class="section-label">
+                            SELECTED WORK
+                        </span>
+
+                        <h2>
+                            Projects I've built.
+                        </h2>
+                    </div>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <span class="project-type">
+                            Backend
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        DOSTTrack Backend
+                    </h3>
+
+                    <p>
+                        Backend service for managing workorders,
+                        documents, users, and organizational workflows.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>TypeScript</span>
+                        <span>PostgreSQL</span>
+                        <span>Kafka</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View project
+                        <span>↗</span>
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            ◇
+                        </div>
+
+                        <span class="project-type">
+                            Full Stack
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Organization Management System
+                    </h3>
+
+                    <p>
+                        A system designed to manage organizational units,
+                        personnel, and hierarchical structures.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>PostgreSQL</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View project
+                        <span>↗</span>
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            +
+                        </div>
+
+                        <span class="project-type">
+                            Web App
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        DisasterReady
+                    </h3>
+
+                    <p>
+                        A disaster information platform providing
+                        updates, mapping, and an integrated donation system.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>Leaflet</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View project
+                        <span>↗</span>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
+
+        <section class="section container" id="experience">
+
+            <div class="section-header">
+
+                <span class="section-number">
+                    04
+                </span>
+
+                <div>
+                    <span class="section-label">
+                        EXPERIENCE
+                    </span>
+
+                    <h2>
+                        Where I've worked.
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-date">
+                    FEB — MAY 2026
+                </div>
+
+                <div class="experience-main">
+
+                    <div class="experience-title">
+
+                        <h3>
+                            Backend Developer
+                        </h3>
+
+                        <span>
+                            OJT / Internship
+                        </span>
+
+                    </div>
+
+                    <a href="#">
+                        DOST — GATES Project 1 · DX Team
+                    </a>
+
+                    <p>
+                        Worked on backend services using Node.js and
+                        TypeScript, developing REST APIs and integrating
+                        PostgreSQL, Kafka, Redis, authentication,
+                        testing, and API documentation.
+                    </p>
+
+                    <div class="experience-tags">
+                        <span>Node.js</span>
+                        <span>TypeScript</span>
+                        <span>PostgreSQL</span>
+                        <span>Kafka</span>
+                        <span>Jest</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact-section container" id="contact">
+
+            <div class="contact-inner">
+
+                <span class="section-label">
+                    HAVE A PROJECT IN MIND?
+                </span>
+
+                <h2>
+                    Let's build something
+                    <span>great together.</span>
+                </h2>
+
+                <p>
+                    I'm open to entry-level backend development
+                    opportunities and projects where I can contribute,
+                    learn, and grow.
+                </p>
+
+                <a href="mailto:your-email@example.com"
+                   class="btn btn-primary">
+                    Get in touch
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <section>
+    <!-- ================= FOOTER ================= -->
 
-    </section>
+    <footer class="footer">
 
+        <div class="container footer-inner">
 
-    <footer>
+            <span>
+                © 2026 Jared Abrera
+            </span>
+
+            <span>
+                Designed & built with code.
+            </span>
+
+        </div>
 
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
 </html>
-```
