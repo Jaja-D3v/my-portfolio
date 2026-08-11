@@ -18,7 +18,7 @@
     --blue: #087cff;
     --blue-light: #2692ff;
 
-    --container: 1180px;
+    --container: 1380px;
 
     --radius: 10px;
 }
@@ -180,7 +180,7 @@ a {
 
     color: var(--text-soft);
 
-    font-size: 12px;
+    font-size: 16px;
 
     transition: color 0.25s ease;
 }
@@ -325,7 +325,7 @@ a {
 
     color: var(--text-soft);
 
-    font-size: 10px;
+    font-size: 14px;
 
     letter-spacing: 0.2px;
 }
@@ -370,7 +370,7 @@ a {
 
     color: var(--text-soft);
 
-    font-size: 14px;
+    font-size: 16px;
 
     line-height: 1.8;
 }
