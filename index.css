@@ -187,18 +187,19 @@ a {
 }
 
 .nav-link.active::after {
+    transition-duration: 70ms;
     content: "";
     position: absolute;
     left: 50%;
     bottom: -25px;
-    width: 4px;
-    height: 4px;
+    width: 60px;
+    height: 2px;
     transform: translateX(-50%);
-    border-radius: 50%;
     background: var(--blue);
     box-shadow:
         0 0 10px
         rgba(8, 124, 255, 0.8);
+     transition: width 0.3s ease;
 }
 
 .nav-resume {
@@ -209,7 +210,7 @@ a {
     border: 1px solid var(--border-light);
     border-radius: 6px;
     color: var(--text);
-    font-size: 11px;
+    font-size: 14px;
     transition:
         border-color 0.25s ease,
         background 0.25s ease;
@@ -1080,13 +1081,14 @@ a {
 
 @media (max-width: 1000px) {
     #closeBtn{
-    display: block;
-    color:white;
-    background-color: transparent;
-    width: 5vh;
-    align-self: flex-end;
-    border: none;
-    cursor: pointer;
+        border: 1px solid rgb(255, 252, 252);
+        display: block;
+        margin-left: 100vw;
+        color:white;
+        background-color: transparent;
+        width: 5vh;
+        border: none;
+        cursor: pointer;
 
     }
 
@@ -1129,7 +1131,7 @@ a {
     #closeBtn{
         border: 1px solid rgb(255, 252, 252);
         display: block;
-        margin-left: 95%;
+        margin-left: 80vw;
         color:white;
         background-color: transparent;
         width: 5vh;
