@@ -11,7 +11,7 @@
 
     <meta
         name="description"
-        content="Jared Abrera — Backend Developer specializing in Node.js, TypeScript, PostgreSQL and scalable backend systems."
+        content="Jared Abrera — Backend Developer specializing in PHP, Mysql, PostgreSQL and scalable backend systems."
     >
 
     <title>Jared Abrera — Backend Developer</title>
@@ -32,18 +32,23 @@
                 <span>Jaja.dev</span>
             </a>
 
+
+
             <button
                 class="menu-toggle"
                 type="button"
                 aria-label="Toggle navigation"
                 aria-expanded="false"
+                id="menuBtn"
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <div class="nav-menu">
+            <div class="nav-menu" id="mobileNav">
+                <button id="closeBtn">✕</button>
+
 
                 <a href="#home" class="nav-link active">
                     Home
@@ -101,7 +106,7 @@
                 </h1>
 
                 <p class="hero-text">
-                    I'm Jared Abrera, a backend developer focused on
+                    I'm <span>Jared Abrera</span>, a backend developer focused on
                     building scalable APIs, clean architectures, and
                     reliable server-side applications.
                 </p>
@@ -124,15 +129,15 @@
 
                     <span>Find me on</span>
 
-                    <a href="#" aria-label="GitHub">
+                    <a href="https://github.com/Jaja-D3v" aria-label="GitHub" target="_blank">
                         GH
                     </a>
 
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/jared-abrera-419886397/" aria-label="LinkedIn" target="_blank">
                         in
                     </a>
 
-                    <a href="#" aria-label="Email">
+                    <a href="mailto:jaredabrera44@gmail.com" aria-label="Email" target="_blank">
                         @
                     </a>
 
@@ -300,10 +305,10 @@
             <div class="skills-grid">
 
                 <div class="skill-card">
-                    <span class="skill-icon">JS</span>
+                    <span class="skill-icon">L</span>
                     <div>
-                        <strong>Node.js</strong>
-                        <small>Backend Runtime</small>
+                        <strong>Laravel</strong>
+                        <small>Framework</small>
                     </div>
                 </div>
 
@@ -485,7 +490,6 @@
 
                     <div class="project-tags">
                         <span>PHP</span>
-                        <span>Laravel</span>
                         <span>MySQL</span>
                         <span>Leaflet</span>
                     </div>
@@ -569,8 +573,6 @@
             </div>
 
         </section>
-
-
         <!-- ================= CONTACT ================= -->
 
         <section class="contact-section container" id="contact">
@@ -622,7 +624,6 @@
         </div>
 
     </footer>
-
 
     <script src="script.js"></script>
 
