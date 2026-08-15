@@ -22,4 +22,4 @@ navLinks.forEach(link => {
     });
 });
 
-// for animation
+// for cv 
