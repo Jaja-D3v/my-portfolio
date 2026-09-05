@@ -15,7 +15,7 @@
     --text-soft: #9aa9bb;
     --text-muted: #657589;
 
-    --blue: #00bdbd;
+    --blue: #1994ff;
     --blue-light: #5fadfa;
 
 
@@ -26,7 +26,7 @@
 
     --container: 1380px;
 
-    --radius: 10px;
+    --radius: 35px;
 }
 
 
@@ -99,6 +99,7 @@ body::before {
 img {
     max-width: 100%;
     display: block;
+    border-radius: 30px;
 }
 
 button,
@@ -134,9 +135,12 @@ a {
     position: fixed;
     inset: 0 0 auto;
     height: 72px;
+    border-radius: 20px;
+    margin: 20px;
+    /* border: 1px solid white; */
     z-index: 1000;
-    background: rgba(2, 7, 17, 0.78);
-    border-bottom: 1px solid rgba(20, 36, 56, 0.7);
+    background: rgba(30, 36, 48, 0.78);
+    border-bottom: 1px solid rgba(65, 65, 66, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 }
@@ -154,7 +158,7 @@ a {
     gap: 9px;
     font-size: 18px;
     font-weight: 700;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.8px;
 }
 
 .brand-mark {
@@ -208,7 +212,7 @@ a {
     gap: 8px;
     padding: 8px 13px;
     border: 1px solid var(--border-light);
-    border-radius: 6px;
+    border-radius: 20px;
     color: var(--text);
     font-size: 14px;
     transition:
@@ -343,10 +347,10 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 7px;
     min-height: 50px;
-    padding: 0 16px;
-    border-radius: 6px;
+    padding: 4px 30px;
+    border-radius: 25px;
     font-size: 14px;
     font-weight: 500;
 
@@ -462,7 +466,7 @@ a {
         100%,
         440px
     );
-
+    border-radius: 30px;
     height: 500px;
     display: flex;
     align-items: flex-end;
@@ -508,7 +512,7 @@ a {
     width: 230px;
     padding: 13px;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 20px;
     background:
         rgba(4, 12, 23, 0.85);
 
@@ -564,7 +568,7 @@ a {
     flex-direction: column;
     padding: 10px 12px;
     border: 1px solid var(--border);
-    border-radius: 7px;
+    border-radius: 20px;
     background:
         rgba(5, 13, 25, 0.9);
 
@@ -725,6 +729,7 @@ a {
     gap: 12px;
     min-height: 72px;
     padding: 12px;
+    padding-left: 23px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--surface);
@@ -745,7 +750,7 @@ a {
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    border-radius: 7px;
+    border-radius: 30px;
     background:
         rgba(8, 124, 255, 0.1);
     color: var(--blue);
@@ -989,7 +994,7 @@ a {
     padding: 80px 40px;
     text-align: center;
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: var(--radius);
     overflow: hidden;
     background:
         radial-gradient(
@@ -1351,7 +1356,8 @@ a {
 
 .fa-envelope {
     --fa: "\f0e0";
-    margin-left: -6px;
+    margin-left: 5px;
+    margin-right: 1px;
 }
 
 .fa-github {
