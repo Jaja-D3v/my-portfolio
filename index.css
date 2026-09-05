@@ -653,6 +653,7 @@ a {
 
 .about-copy {
     max-width: 650px;
+    margin-left: 10%;
 }
 
 .about-copy p {
@@ -749,7 +750,7 @@ a {
         rgba(8, 124, 255, 0.1);
     color: var(--blue);
     font-family: monospace;
-    font-size: 9px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -1342,4 +1343,34 @@ a {
         height: 360px;
     }
 
+}
+
+
+
+/* this is for icons */
+
+.fa-envelope {
+    --fa: "\f0e0";
+    margin-left: -6px;
+}
+
+.fa-github {
+    --fa: "\f09b";
+    font-size: 15px;
+}
+
+.fa-linkedin-in {
+    --fa: "\f0e1";
+    font-size: 15px;
+}
+
+.fa-at {
+    --fa: "\40";
+    font-size: 15px;
+
+}
+
+.fa-laravel {
+    --fa: "\f3bd";
+    font-size: 17px;
 }
