@@ -22,4 +22,20 @@ navLinks.forEach(link => {
     });
 });
 
-// for cv 
+// this is for animation
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+reveals.forEach((element) => {
+    observer.observe(element);
+});
