@@ -39,3 +39,28 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach((element) => {
     observer.observe(element);
 });
+
+
+// for changing tab 
+
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+});
+
+
+// for mouise indicator
+
+const scrollIndicator = document.querySelector(".scroll-indicator");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        scrollIndicator.classList.add("hide");
+    } else {
+        scrollIndicator.classList.remove("hide");
+    }
+});

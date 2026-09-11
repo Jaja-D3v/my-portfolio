@@ -34,6 +34,10 @@
    RESET
 ======================================== */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -274,6 +278,86 @@ a {
 }
 
 
+
+/* this is for mouse indicator  */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 8px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.mouse {
+    width: 22px;
+    height: 34px;
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    position: relative;
+}
+
+.mouse::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 7px;
+    background: currentColor;
+    border-radius: 2px;
+    
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    animation: scroll-wheel 1.5s infinite;
+}
+
+@keyframes scroll-wheel {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    opacity: 0.7;
+
+    transition: opacity 0.5s ease;
+}
+
+.scroll-indicator.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 /* ========================================
    HERO CONTENT
 ======================================== */
@@ -462,36 +546,40 @@ a {
 .profile-wrapper {
     position: relative;
     z-index: 2;
-    width: min(
-        100%,
-        440px
-    );
-    border-radius: 30px;
+    width: min(100%, 440px);
     height: 500px;
+    border-radius: 30px;
+    
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
-
 .profile-glow {
     position: absolute;
 
-    width: 280px;
-    height: 280px;
-    bottom: 50px;
+    width: 380px;
+    height: 150px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
     border-radius: 50%;
-    background:
-        rgba(8, 124, 255, 0.15);
+    background: rgba(199, 199, 200, 0.614);
     filter: blur(70px);
+
+    z-index: 1;
 }
 
 .profile-image {
+   
     position: relative;
     z-index: 2;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: bottom;
+    object-fit: cover;
+    object-position: center 40%;
+    /* object-position: bottom; */
+    border-radius: 18px;
     filter:
         drop-shadow(
             0 20px 40px
@@ -1080,32 +1168,68 @@ a {
     font-size: 9px;
 }
 
-
 /* ========================================
    TABLET
 ======================================== */
 
-@media (max-width: 1000px) {
-    #closeBtn{
-        border: 1px solid rgb(255, 252, 252);
+@media (min-width: 900px) and (max-width: 1000px){
+
+    /* Hide scroll indicator */
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* Mobile/Tablet menu button */
+    .menu-toggle {
         display: block;
-        margin-left: 100vw;
-        color:white;
-        background-color: transparent;
-        width: 5vh;
-        border: none;
-        cursor: pointer;
-
     }
 
+    /* Mobile navigation */
     .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -300px;
+
+        width: 280px;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
         gap: 18px;
+        padding: 80px 30px 30px;
+
+        background: #060D18;
+
+        transition: right 0.3s ease;
+        z-index: 1000;
     }
 
+    /* When menu is opened */
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* Close button */
+    #closeBtn {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        display: block;
+
+        border: none;
+        background: transparent;
+        color: white;
+
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hero */
     .hero {
-        grid-template-columns:
-            1fr
-            0.8fr;
+        grid-template-columns: 1fr 0.8fr;
         gap: 30px;
     }
 
@@ -1113,13 +1237,11 @@ a {
         font-size: clamp(40px, 6vw, 60px);
     }
 
+    /* Skills */
     .skills-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-
 }
-
 
 /* ========================================
    MOBILE
@@ -1129,15 +1251,19 @@ a {
 
     
     #mobileNav {
-    display: none;
+        display: none;
     
+    }
+
+    .scroll-indicator{
+        display: none;
     }
 
 
     #closeBtn{
         border: 1px solid rgb(255, 252, 252);
         display: block;
-        margin-left: 80vw;
+        margin-left: 75vw;
         color:white;
         background-color: transparent;
         width: 5vh;
